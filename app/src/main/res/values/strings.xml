@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Broadcast</string>
+    <string name="newIntent">Новый интент!</string>
+</resources>
