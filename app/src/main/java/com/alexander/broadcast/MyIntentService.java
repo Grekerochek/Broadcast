@@ -12,6 +12,11 @@ public class MyIntentService extends IntentService {
 
     private static final String MESSAGE_KEY = "message_key";
     private static final String MANAGER_STATE = "managerState";
+    private static final String STATE_A = "A";
+    private static final String STATE_B =  "B";
+    private static final String STATE_C = "C";
+    private static final String STATE_D = "D";
+    private static final String STATE_E = "E";
 
 
     public MyIntentService() {
@@ -22,19 +27,19 @@ public class MyIntentService extends IntentService {
     protected void onHandleIntent(@Nullable Intent intent) {
 
         switch(intent.getStringExtra(MESSAGE_KEY)){
-            case "A": StateManager.getInstance().setState("A");
+            case STATE_A: StateManager.getInstance().setState("A");
             sendBroadcast(StateManager.getInstance().getState());
             break;
-            case "B": StateManager.getInstance().setState("B");
+            case STATE_B: StateManager.getInstance().setState("B");
             sendBroadcast(StateManager.getInstance().getState());
             break;
-            case "C": StateManager.getInstance().setState("C");
+            case STATE_C: StateManager.getInstance().setState("C");
             sendBroadcast(StateManager.getInstance().getState());
             break;
-            case "D": StateManager.getInstance().setState("D");
+            case STATE_D: StateManager.getInstance().setState("D");
             sendBroadcast(StateManager.getInstance().getState());
             break;
-            case "E": StateManager.getInstance().setState("E");
+            case STATE_E: StateManager.getInstance().setState("E");
             sendBroadcast(StateManager.getInstance().getState());
             break;
 

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private CustomBroadcastReceiver mReceiver;
     private IntentFilter mIntentFilter;
 
-    private String [] states = new String[]{"A", "B", "C", "D", "E"};
+    private static final String [] STATES = new String[]{"A", "B", "C", "D", "E"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startService(MyIntentService.getIntetnForSend(MainActivity.this, states[new Random().nextInt(states.length)]));
+                startService(MyIntentService.getIntetnForSend(MainActivity.this, STATES[new Random().nextInt(STATES.length)]));
             }
         });
     }
